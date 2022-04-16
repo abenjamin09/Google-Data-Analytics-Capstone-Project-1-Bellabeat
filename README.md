@@ -72,3 +72,17 @@ User_5
 My second analyzation comes from heart rate data. I visualized the data from user 6 on 4/12/16 from 7AM to 8PM to show how his heart rate varied along with his average intensity. The graphs look similar indicating a strong relationship. This relationship is reinforced by a correlation coefficient of 0.878 measured between heartrate value and average intensity.
 ![image](https://user-images.githubusercontent.com/103777815/163675159-b6227eb9-e9be-402f-8627-a39f83b38176.png)
 ![image](https://user-images.githubusercontent.com/103777815/163675162-0f3e4a5d-fca9-46f6-98a8-695c9488c12f.png)
+
+My third visualization is indicating a lack of data entry in weight log information. The number of users that logged weight information is very small, with many of them logging less than 5 times for the entire month. I am assuming this has to do with weight scale not being available, unknowledgeable on how to measure BMI, or inconvenience to enter data. 
+![image](https://user-images.githubusercontent.com/103777815/163675205-add88d2c-65a3-4423-979a-dbcafde39665.png)
+
+My last analyzation comes from daily activity merged data set measuring Activity levels and how they very throughout the month. As you can see from the graph, sedentary is the highest amount ranging from slightly above 500 minutes per day all the way up to 1400 minutes per day. Below this is Fairly Active Minutes and then Very active and lightly active. As you can see most of user 1’s time through out the month is spent being sedentary. Creating an alarm within the BellaBeat app when sedentary times raise over a certain level would be something to implement to promote healthiness within individuals. Or even creating a feature within the app that sets goals for very/fairly active minutes.
+
+![image](https://user-images.githubusercontent.com/103777815/163675190-3da36496-71fa-4b3a-a21e-56f5b1c6ecb2.png)
+![image](https://user-images.githubusercontent.com/103777815/163675195-9eb4c6ad-9acf-4d59-a9ba-2adedf3053b6.png)
+
+## Recommendations based on Analysis
+
+To influence sales and usage of the Bellabeat app the company will need to implement analyzations of sleep, heart rate, intensity, and similar data within the app. It will also benefit the company to find ways in which users can easily log weight data as this was a point of concern within these data sets. Lastly, alarms within the app should be created to alert users of their activity goals for the day.
+
+
