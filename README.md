@@ -1,7 +1,6 @@
 # Google Data Analytics Professional Certificate Capstone Project #1
 ## BellaBeat
 ## Introduction
-
 You are a junior data analyst working on the marketing analyst team at Bellabeat, a high-tech manufacturer of health-focused
 products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the
 global smart device market. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart
@@ -11,5 +10,11 @@ insights you discover will then help guide marketing strategy for the company. Y
 executive team along with your high-level recommendations for Bellabeat’s marketing strategy.
 
 ## Business Task
+Bellabeat has hired a data analyst to analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices. The trends I discover in this data will influence marketing strategy for the Bellabeat app based on analyzing trends in data from users with smart devices unrelated to Bellabeat products. These insights can drive business decisions based on how to market the product, what features of the product to enhance or optimize, and what features to disable or ways to save money within the product line (least used features of the product based on trends in smart device data.) 
 
-Bellabeat has hired a data analyst to analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices. influence marketing strategy for the Bellabeat app based on analyzing trends in data from users with smart devices unrelated to Bellabeat products. These insights can drive business decisions based on how to market the product, what features of the product to enhance or optimize, and what features to disable or ways to save money within the product line (least used features of the product based on trends in smart device data.) 
+## Description of Data Sources
+[https://www.kaggle.com/datasets/arashnic/fitbit](FitBit Fitness Tracker Data) (CC0: Public Domain, dataset made available through Mobius): This Kaggle data set
+contains personal fitness tracker from thirty fitbit users. Thirty eligible Fitbit users consented to the submission of
+personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring. It includes
+information about daily activity, steps, and heart rate that can be used to explore users’ habits.
+
