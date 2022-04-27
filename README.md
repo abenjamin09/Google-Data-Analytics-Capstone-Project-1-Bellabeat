@@ -46,7 +46,7 @@ This visualization represents sleep patterns of users from April 2016 to May of 
 
 My first analysis will be of sleepDay_merged data. I want to analyze normal amount of sleep per user.
 
-![Alt Text](/cloud/project/data_visualizations/Avg_hours_asleepFINAL.jpeg)
+![Alt Text](sleep_patterns_2.jpg)
 
 read data
 ```{r}
