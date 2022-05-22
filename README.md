@@ -140,9 +140,7 @@ sleep_data <- purrr::map2_df(
 ```
 
 ##### Check for irregularities
-```{r}
-summary(sleep_data)
-```
+
 First thing I notice in TotalMinutesAsleep is Min value of less than an hour and Max value higher than 13 hours.
 ```{r}
 796/60
@@ -159,7 +157,7 @@ remove rows where users recorded sleep records more than once a day $TotalSleepR
 ```{r}
 sleep_data <- sleep_data[-c(which(sleep_data$TotalSleepRecords > 1.0)), ]
 ```
-##### Cleaning and Filtering
+# Cleaning and Filtering
 
 Step 1: **heartrate_data**
 heartrate_data is a very large data set so I filter 'heartrate_data' to contain data for user_6 only
