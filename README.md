@@ -257,11 +257,64 @@ After reviewing these data sets I have discovered three major trends. First is f
 
 #### Sleep Patterns 
 
-This visualization represents sleep patterns of users. I have decided to drop data from user 4 and user 18 due to unrealistic sleep times. 22 of 33 users were included in this data set due to lack of input data.
+This visualization represents sleep patterns of users. 22 of 33 users were included in this data set due to lack of input data.
 
 My first analysis will be of sleepDay_merged data. I want to analyze normal amount of sleep per user from April to May of 2016.
 
 ![alt text](sleep_data_update2.jpg)
+
+```{r, fig.show='hide'}
+ggplot(data=sleep_datatwo, aes(x=User,y=avg_hours_asleep, group=1)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "lm") +
+  theme(axis.text.x = element_text(angle = 45)) +
+  ggtitle("Sleep Data",
+          subtitle = "03.12.2016-05.12.2016 ")
+```
+#### Heart Rate vs Average Intensity
+Next, I visualized the data from user 6 on 2016-04-16 from 7AM to 8PM to show how his heart rate varied along with his average intensity. The graphs look similar indicating a strong relationship. This relationship is reinforced by a correlation coefficient of **0.878** measured between heart rate and average intensity.
+
+![alt text](heart_rate_plot_final.jpg)
+
+```{r, fig.show='hide'}
+heartrate_data %>%
+  mutate(heartrate_data, Time = as.POSIXct(Time, format = "%m/%d/%Y %I:%M:%OS %p")) %>%
+  ggplot(aes(x = Time, y = Value)) +
+  geom_line() +
+  theme_bw() +
+  scale_x_datetime(breaks = "1 hour", date_labels = "%I:%M %p") +
+  theme(axis.text.x = element_text(angle = 45)) +
+  ggtitle("heart rate user_6",
+          subtitle = "4-12-2016")
+```
+![alt text](average_intensity_plot.jpg) 
+
+#### Average Intensity
+
+```{r, fig.show='hide'}
+ggplot(data=hourlyIntensities_data) +
+  geom_point(mapping = aes(x = ActivityHour, y = AverageIntensity, group = 1)) +
+  geom_line(mapping = aes(x = ActivityHour, y = AverageIntensity, group = 1)) +
+  theme(axis.text.x = element_text(angle = 45)) + 
+  scale_x_discrete(limits = axisorder) +
+  ggtitle("Average Intensity user_6",
+          subtitle = "4-12-2016")
+
+```
+
+#### Weight Log
+
+My third visualization is indicating a lack of data entry in weight log information. The number of users that logged weight information is very small, with many of them logging less than 5 times for the entire month. I am assuming this has to do with weight scales not being available, lack of knowledge on how to measure BMI, or inconveniences in entering data. 
+
+![alt text](Weight Log info.jpg)
+
+plot
+```{r, fig.show='hide'}
+ggplot(data = repeated_users, aes(x = id, y = times_used)) +
+  geom_bar(stat= 'identity') +
+  ggtitle("Weight Log")
+```
+
 
 ### Summary Statistics: Sleep Patterns
 I have decided to create summary statistics for users 5, 13, and 17 in order to analyze specifics of nightly sleep schedules. The users were chosen at random to avoid bias.
@@ -294,10 +347,15 @@ summary(sleepday_merged_User17$TotalHoursAsleep)
 summary(sleepday_merged_User5$TotalHoursAsleep)
 ```
 
-# Summary of Analysis
+# Step 6 - Act
 
-After reviewing these data sets I have discovered three major trends. First is from the "sleepday_merged data set." Here, I analyzed the average hours of sleep each user is getting per night, from April 2016 through May 2016. After dropping outliers and analyzing the data it is apparent that users are getting between 6 to 8 hours of sleep. My second analyzation was of "heartrate_seconds_merged data set" and "hourlyintensity_merged data set." After analyzing data for user 6 on 4/12/16, it is noticeable the effect that average intensity has on heart rate. These two variables are strongly correlated with a correlation coefficient of **0.878**. My last analyzation was of weight log information. Trends in this data set show that many users are not logging their weight information. 
+**Guiding questions**
 
-# Recommendations
+* What is your final conclusion based on your analysis? After analyzing sleep, intensity, heart rate, and weight log data it is evident that there are ways to improve upon the Bellabeat product of choice: Bellabeat app. From this analysis adding features such as graphs, alarms, and weight log abilities will allow the Bellabeat product of choice to add further value to users and thus increase marketability. 
+* How could your team and business apply your insights? Add graphs, accessability for weight log data, and alarms
+* What next steps would you or your stakeholders take based on your findings? take findings to development team and then begin new marketing strategy
+* Is there additional data you could use to expand on your findings? 
 
-To influence sales and usage of the Bellabeat app the company will need to implement graphs of sleep, heart rate, intensity, and similar data within the app. Secondly, the implementation of routine sleep notifications to alert users of when to go to sleep to obtain 6-8 hours of sleep will be beneficial as this is the average amount of sleep seen for users within these data sets. Lastly, it will be beneficial for the company to find ways in which users can easily log weight data as this is a major point of missing data within our smart device data sets.
+#### Insights and Recommendations
+
+To influence sales and usage of the Bellabeat app the company will need to implement graphs of sleep, heart rate, intensity, and similar data within the app. Routine sleep notifications to alert users of when to go to sleep to obtain 6-8 hours of sleep will be beneficial as this is the average amount of sleep seen for users within the data set. Lastly, It will be beneficial for the company to find ways in which users can easily log weight data as this is a point of concern within our data.
