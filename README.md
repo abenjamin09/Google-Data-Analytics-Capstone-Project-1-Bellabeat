@@ -306,7 +306,7 @@ ggplot(data=hourlyIntensities_data) +
 
 My third visualization is indicating a lack of data entry in weight log information. The number of users that logged weight information is very small, with many of them logging less than 5 times for the entire month. I am assuming this has to do with weight scales not being available, lack of knowledge on how to measure BMI, or inconveniences in entering data. 
 
-![alt text](Weight Log info.jpg)
+![alt text](Weight_Log_info.jpg)
 
 plot
 ```{r, fig.show='hide'}
