@@ -261,7 +261,7 @@ This visualization represents sleep patterns of users. I have decided to drop da
 
 My first analysis will be of sleepDay_merged data. I want to analyze normal amount of sleep per user from April to May of 2016.
 
-![alt text](/cloud/project/data_visualizations/sleep_data_update2.jpeg)
+![alt text](sleep_data_update2.jpg)
 
 ### Summary Statistics: Sleep Patterns
 I have decided to create summary statistics for users 5, 13, and 17 in order to analyze specifics of nightly sleep schedules. The users were chosen at random to avoid bias.
